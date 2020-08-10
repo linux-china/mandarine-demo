@@ -1,7 +1,7 @@
 import {Controller, GET, Inject} from "../deps.ts";
 import {ManualInjectionService} from "../services/ManualInjectionService.ts";
 
-@Controller()
+@Controller("/user")
 export class MyController {
     @Inject()
     public manualInjectionService: ManualInjectionService;
@@ -13,7 +13,7 @@ export class MyController {
 
     @GET('/helloWorld')
     public helloWorld() {
-        return this.manualInjectionService.helloWorld();
+        return this.manualInjectionService.helloWorld("Jackie");
     }
 
 }
