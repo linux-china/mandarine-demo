@@ -1,7 +1,7 @@
 import {Controller, GET, Inject} from "../deps.ts";
 import {ManualInjectionService} from "../services/ManualInjectionService.ts";
 
-@Controller("/user")
+@Controller()
 export class MyController {
     @Inject()
     public manualInjectionService: ManualInjectionService;
