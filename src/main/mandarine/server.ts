@@ -1,14 +1,12 @@
-import {Configuration, Injectable, MandarineCore} from "./deps.ts";
+import {MandarineCore} from "./deps.ts";
 
-import {MyController} from "./controllers/MyController.ts";
+import {MyController} from "./controllers/MyController.ts"
+import {ManualInjectionService} from "./services/ManualInjectionService.ts"
 
-@Configuration()
-export class MainConfig {
-
-    public MyController() {
-        return new MyController();
-    }
-
-}
+// Mandarine.TS Components Map to load all components
+const componentsMap = {
+    services: [ManualInjectionService],
+    controllers: [MyController]
+};
 
 new MandarineCore().MVC().run();
