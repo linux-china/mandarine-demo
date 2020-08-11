@@ -4,6 +4,7 @@ import {MyController} from "./controllers/MyController.ts"
 import {ManualInjectionService} from "./services/ManualInjectionService.ts"
 
 // Mandarine.TS Components Map to load all components
+// noinspection JSUnusedLocalSymbols
 const componentsMap = {
     configurations: [],
     repositories: [],
@@ -13,4 +14,8 @@ const componentsMap = {
     controllers: [MyController]
 };
 
-new MandarineCore().MVC().run();
+function main(args: string[]) {
+    new MandarineCore().MVC().run();
+}
+
+main(Deno.args);
