@@ -8,7 +8,7 @@ export class MyController {
 
     @GET('/welcome')
     public async httpHandler() {
-        return Promise.resolve("Welcome to MandarineTS Framework!");
+        return Promise.resolve(Deno.env.get("nick"));
     }
 
     @GET('/helloWorld')
