@@ -1,10 +1,11 @@
 ### welcome
 GET http://localhost:8080/welcome
 
-
 ### hello world
 GET http://localhost:8080/helloWorld
 
+### Template handlebars
+GET http://localhost:8080/template1
 
 ### static index.html
 GET http://localhost:8080/index.html
