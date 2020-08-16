@@ -4,3 +4,7 @@ GET http://localhost:8080/welcome
 
 ### hello world
 GET http://localhost:8080/helloWorld
+
+
+### static index.html
+GET http://localhost:8080/index.html
