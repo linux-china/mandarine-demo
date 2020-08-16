@@ -1,10 +1,13 @@
-import {Service} from "../deps.ts";
+import {Service, Value} from "../deps.ts";
 
 @Service()
 export class ManualInjectionService {
 
+    @Value('welcome')
+    public welcome: string;
+
     public helloWorld(name: string): string {
-        return `Hello ${name}`;
+        return `${this.welcome} ${name}`;
     }
 
 }
