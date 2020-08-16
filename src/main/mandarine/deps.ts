@@ -1,5 +1,5 @@
 export {
-    MandarineCore,
+    MandarineCore, Value,
     Configuration, Service, Component,
     Injectable, Inject,
     Controller, GET
