@@ -3,7 +3,7 @@ import {Configuration, Injectable} from "./deps.ts";
 export class UserService {
 
     public findNickById(id: number): string {
-        return "nick: 1";
+        return `nick: ${id}`;
     }
 }
 
