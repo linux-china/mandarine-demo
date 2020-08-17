@@ -7,4 +7,4 @@ export {
     RouteParam, QueryParam, RequestParam
 } from "https://x.nest.land/MandarineTS@1.5.0/mod.ts";
 
-export {UserService} from "./AppConfiguration.ts"
+export {UserService} from "./configurations.ts"

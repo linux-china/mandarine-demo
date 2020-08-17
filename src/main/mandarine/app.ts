@@ -2,7 +2,7 @@ import {MandarineCore} from "./deps.ts";
 
 import {MyController} from "./controllers/MyController.ts"
 import {ManualInjectionService} from "./services/ManualInjectionService.ts"
-import {AppConfiguration} from "./AppConfiguration.ts";
+import {AppConfiguration} from "./configurations.ts";
 
 // Mandarine.TS Components Map to load all components
 // noinspection JSUnusedLocalSymbols
