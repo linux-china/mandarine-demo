@@ -1,6 +1,9 @@
 ### welcome
 GET http://localhost:8080/welcome
 
+### nick
+GET http://localhost:8080/nick/1
+
 ### hello world
 GET http://localhost:8080/helloWorld
 
