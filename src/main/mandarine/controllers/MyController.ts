@@ -1,14 +1,23 @@
-import {Controller, GET, Inject, Model, Render, ViewModel} from "../deps.ts";
+import {Controller, GET, Inject, Model, Render, UserService, ViewModel} from "../deps.ts";
 import {ManualInjectionService} from "../services/ManualInjectionService.ts";
 
 @Controller()
 export class MyController {
+
     @Inject()
     public manualInjectionService: ManualInjectionService;
+
+    @Inject()
+    public userService: UserService;
 
     @GET('/welcome')
     public async welcome() {
         return Promise.resolve("Welcome to Mandarine.TS!");
+    }
+
+    @GET('/nick')
+    public async nick() {
+        return this.userService.findNickById(1);
     }
 
     @GET('/env/nick')
