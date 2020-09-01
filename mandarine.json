@@ -1,5 +1,6 @@
 {
   "denoEnv": {
-    "nick": "linux_china"
+    "nick": "linux_china",
+    "welcome": "Welcome"
   }
 }
