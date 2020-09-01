@@ -1,9 +1,9 @@
-import {Service, Value} from "../deps.ts";
+import {Service, Value, ValueScopes} from "../deps.ts";
 
 @Service()
 export class ManualInjectionService {
 
-    @Value('welcome')
+    @Value('welcome', ValueScopes.ENVIRONMENTAL)
     public welcome: string;
 
     public helloWorld(name: string): string {
