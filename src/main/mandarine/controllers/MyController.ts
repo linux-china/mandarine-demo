@@ -1,5 +1,6 @@
-import {Controller, GET, Inject, Model, Render, RouteParam, UserService, ViewModel} from "../deps.ts";
+import {Controller, GET, Inject, Model, Render, RouteParam, ViewModel} from "../deps.ts";
 import {ManualInjectionService} from "../services/ManualInjectionService.ts";
+import {UserService} from "../configurations.ts";
 
 @Controller()
 export class MyController {
