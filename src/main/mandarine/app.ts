@@ -1,8 +1,9 @@
 import {MandarineCore} from "./deps.ts";
 
-import {MyController} from "./controllers/MyController.ts"
-import {ManualInjectionService} from "./services/ManualInjectionService.ts"
 import {AppConfiguration} from "./configurations.ts";
+import {ManualInjectionService} from "./services/ManualInjectionService.ts"
+import {MyController} from "./controllers/MyController.ts"
+
 const env = Deno.env.toObject();
 
 // Mandarine.TS Components Map to load all components
