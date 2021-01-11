@@ -3,6 +3,7 @@ import {MandarineCore} from "./deps.ts";
 import {AppConfiguration} from "./configurations.ts";
 import {ManualInjectionService} from "./services/ManualInjectionService.ts"
 import {MyController} from "./controllers/MyController.ts"
+import {OpenAPIController} from "./controllers/OpenAPIController.ts"
 
 const env = Deno.env.toObject();
 
@@ -14,7 +15,7 @@ const componentsMap = {
     services: [ManualInjectionService],
     middlewares: [],
     components: [],
-    controllers: [MyController]
+    controllers: [MyController, OpenAPIController]
 };
 
 function main(args: string[]) {
