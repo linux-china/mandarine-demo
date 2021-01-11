@@ -1,8 +1,10 @@
 import {Controller, GET, Inject, Model, Render, RouteParam, ViewModel} from "../deps.ts";
 import {ManualInjectionService} from "../services/ManualInjectionService.ts";
 import {UserService} from "../configurations.ts";
+import {Api, ApiOperation} from "../openapi/openapi.ts"
 
 @Controller()
+@Api("My controller ")
 export class MyController {
 
     @Inject()
@@ -16,6 +18,7 @@ export class MyController {
         return Promise.resolve("Welcome to Mandarine.TS!");
     }
 
+    @ApiOperation("Find nick by id")
     @GET('/nick/:id')
     public async nick(@RouteParam() id: number) {
         return this.userService.findNickById(id);
