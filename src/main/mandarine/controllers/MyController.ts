@@ -1,7 +1,7 @@
 import {Controller, GET, Inject, Model, Render, RouteParam, ViewModel} from "../deps.ts";
 import {ManualInjectionService} from "../services/ManualInjectionService.ts";
 import {UserService} from "../configurations.ts";
-import {Api, ApiOperation} from "../openapi/openapi.ts"
+import {Api, ApiOperation, ApiParam} from "../openapi/openapi.ts"
 
 @Controller()
 @Api("My controller ")
@@ -20,7 +20,7 @@ export class MyController {
 
     @ApiOperation("Find nick by id")
     @GET('/nick/:id')
-    public async nick(@RouteParam() id: number) {
+    public async nick(@ApiParam @RouteParam() id: number) {
         return this.userService.findNickById(id);
     }
 
