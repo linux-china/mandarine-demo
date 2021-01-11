@@ -12,3 +12,9 @@ GET http://localhost:8080/template1
 
 ### static index.html
 GET http://localhost:8080/index.html
+
+### get swagger-uit.html
+GET http://localhost:8080/swagger-ui.html
+
+### get openapi.json
+GET http://localhost:8080/v3/openapi.json
